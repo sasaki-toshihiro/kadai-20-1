@@ -1,3 +1,18 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'tasks#index'
+  
+  # CRUD
+  #get 'tasks/:id', to: 'tasks#show'
+
+  # index
+  #get 'tasks', to: 'tasks#index'
+
+  # new
+  #post 'tasks/new', to: 'tasks#new'
+
+  # edit
+  #get 'tasks/:id/edit', to: 'tasks#edit'
+
+  resources :tasks
+
 end
